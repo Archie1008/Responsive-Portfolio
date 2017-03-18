@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<!-- head -->
+
+<head>
+	<title>Contact</title>
+
+	<meta charset="utf-8">
+
+	<!-- Enables media queries -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Resets almost all CSS styling -->
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<!-- My CSS styling -->
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<!-- body -->
+
+<body>
+
+<!-- This wrapper was used to create proper sticky footer -->
+	
+<div class="wrapper">
+
+
+<!-- Header -->
+
+	<header>
+
+		<div class="navigation_bar">
+		
+
+			<h1>Artur Solyanyk</h1>
+
+			<!-- Nav bar with internal site links -->
+	
+			<nav>
+				<a class="sitelinks" href="index.html">About</a>
+				<a class="nav_borders" href="portfolio.html">Portfolio</a>
+				<a class="sitelinks" href="#">Contact</a>
+			</nav>
+
+		</div>
+
+	</header>
+
+
+<!-- Main content container -->
+		
+	<main>
+
+		<!-- Bio section with picture -->
+
+		<section>
+			
+			<h2>Contact</h2>
+
+		<!-- Contact form  -->
+
+			<form>
+				<br>
+				<p>Name</p>
+				<input type="text" name="name" placeholder="John Wayne" autofocus>
+				
+				<br>
+				<br>
+				<p>Email</p>
+				<input type="email" name="email" placeholder="example@gmail.com">
+
+				<br>
+				<br>
+				<p>Message</p>
+				<textarea placeholder="..."></textarea>
+
+				<br>
+				<br>
+				
+				<input class="submit" type="submit" name="submit">
+
+			</form>
+
+		</section>
+		
+		<!-- Sidebar with contact info. -->
+
+		<aside>
+			
+    		<h3>Connect with Me</h3>
+
+			<!-- Don't ask me why I put links in <ul> . That was the fastest way to make it "not crappy" -->
+			
+			<ul>
+			
+				<li>
+					<a href="https://github.com/Archie1008" target="_blank">
+						<img src="assets/images/github.png" alt="Github" width="60" height="60">
+					</a>
+				</li>
+				
+				<li>
+					<a href="https://www.linkedin.com/in/artur-solyanyk" target="_blank">	
+						<img src="assets/images/linkedin.png" alt="Linkedin" width="60" height="60">		
+					</a>
+				</li>
+
+				<li>
+					<a href="http://stackoverflow.com/users/7436608/archie1008" target="_blank">
+						<img src="assets/images/stackoverflow.png" alt="Stackoverflow"  width="60" height="60">
+					</a>
+				</li>	
+			</ul>
+				
+		</aside>
+		
+	</main>
+
+		<!-- I don't think that this is even real clearfix . I just trying to look smart and wanna avoid headaches later . So yes , I put this here just in case ,you know... -->
+
+		<div class="clearfix"></div>
+
+		<!-- This container is for awesome sticky footer here! -->
+
+		<div class="push"></div>
+
+</div> <!-- wrapper -->
+
+	<!-- The same thing , I don't want it to fall apart -->
+	
+	<div class="clearfix"></div>
+
+	
+	<footer><p>&copy;Copyright 2017 Artur Solyanyk</p></footer>
+
+
+</body>
+
+
+</html>
