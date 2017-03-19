@@ -49,6 +49,7 @@ nav {
 
 }
 
+
 /*internal site links "About and Contact*/
 
 .sitelinks {
@@ -58,9 +59,10 @@ nav {
     font-size: 15px;
     padding: 0 10px;
 
+
 }
 
-/*internal site link "Portfolio" I've made it separatly to make a borders between siblings links*/
+/*internal site link "Portfolio" I've made it separatly to make a borders between sibling's links*/
 
 .nav_borders {
 	display: inline-block;
@@ -123,12 +125,37 @@ ul{
 	margin: 0 35px;
 }
 
+/*Animation for external links here*/
+
+@keyframes link_animation {
+	0% {
+		-webkit-transform: rotate(3deg);
+	}
+	
+	50% {
+		-webkit-transform: rotate(-3deg);
+	}
+
+
+	100% {
+		-webkit-transform: rotate(3deg);
+	}
+}
+
 /*To arrange links horisontally*/
 
 li {
 	display: inline-block;
+	position: relative;
 }
 
+li:hover {
+	animation-name: link_animation;
+	animation-duration: 0.3s;
+/*	-webkit-animation-timing-function: linear;*/
+	animation-iteration-count: infinite;
+
+}
 
 /*Heading used in <section> containers */
 
@@ -289,8 +316,9 @@ footer , .push {
 	height: 60px;
 }
 
-
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------------------ Media queries ----------------------------------------------------------------------- */
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*Max screen width 980*/
 
@@ -321,6 +349,16 @@ footer , .push {
 		margin: 30px 0 30px 0;
 	}
 
+	.folio_img {
+		margin: 30px 30px 50px 30px ;
+	}
+
+	.folio_img img {
+		width: 390px;
+		margin: 0;
+
+	}
+
 	/*Heading used in <section> containers */
 
 	h2 {
@@ -329,16 +367,9 @@ footer , .push {
 
 	}
 
-	aside {
-		width: 270px;
-		height: 200px;
-		padding: 0;
-		margin: 30px 0 30px 30px;
-	}
-
 	.main_img {
-	margin: 0 auto;
-	padding: 25px;
+		margin: 0 auto;
+		padding: 25px;
 	}
 
 	.main_img img {
@@ -354,7 +385,41 @@ footer , .push {
 
 }
 
-/*Max screen width 768*/
+/*Form styling for contact.html*/
+
+form {
+	margin: 0 0 0 25px;
+}
+
+/*Stuff inside the <form> from above */
+
+input {
+	width: 400px; 
+	padding: 10px 0;
+}
+
+/*Text area inside the <form> from above ,defines the Message area*/
+
+textarea {
+	width: 400px;	
+}
+
+/*Submit button from contact.html*/
+
+.submit {
+	width: 150px;
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+
+aside {
+	width: 270px;
+	height: 200px;
+	padding: 0;
+	margin: 30px 0 30px 30px;
+	}
+
+/*---------------------------------------------------------------------Max screen width 768--------------------------------------------------------------------*/
 
 @media screen and (max-width: 768px) {
 
@@ -370,10 +435,13 @@ footer , .push {
 		font-size: 25px;
 		padding:20px 25px;
 		margin-left: 25px;
+		min-width: 195px;
 	}	
 
 	nav {
-		padding: 25px 0 25px 200px;
+		width: 40%;
+		padding:25px 0;
+		margin-left: 100px;
 	}
 
 	main {
@@ -386,10 +454,45 @@ footer , .push {
 		margin: 30px 0 30px 0;
 	}
 
+	.main_img img {
+		width: 300px;
+		height: 250px;
+	}
+
 	/*This class is a <div> container which has my bio in it . Includes <p> tags.*/
 
 	.content {
 		margin: 25px 25px 50px 25px;
+	}
+
+	.folio_img {
+		margin: 25px 25px 50px 25px ;
+	}
+
+	.folio_img img {
+		width: 300px;
+		margin: 0;
+
+	}
+
+	/*Stuff inside the <form> from above */
+
+	input {
+		width: 647px; 
+	}
+
+	/*Text area inside the <form> from above ,defines the Message area*/
+
+	textarea {
+		width: 647px;	
+	}
+
+	/*Submit button from contact.html*/
+
+	.submit {
+		width: 150px;
+		padding: 10px 0;
+		margin-bottom: 20px;
 	}
 
 	aside {
@@ -415,7 +518,7 @@ footer , .push {
 
 }
 
-/*Max screen width 640*/
+/*----------------------------------------------------------------- Max screen width 640 --------------------------------------------------------------*/
 
 @media screen and (max-width: 640px) {
 	
@@ -428,7 +531,6 @@ footer , .push {
 	.navigation_bar {
 		width:100%;
 		margin: 0 ;
-
 	}
 
 
@@ -439,6 +541,7 @@ footer , .push {
 		margin: 0 ;
 		clear: left;
 		width: 100%;
+		min-width: 100%;
 	}	
 
 	nav {
@@ -446,47 +549,78 @@ footer , .push {
 		padding: 25px 0 25px 0;
 		text-align: center;
 		margin: 0;
-		width: 100%;
 		clear: left;
-		
-
+		width: 100%;	
 	}
+
+	.nav_borders {
+		padding: 0 ;
+		width: 30%;
+	}
+
+	.sitelinks {
+		padding: 0 ;
+		width: 30%;
+	}
+
 	
 	main {
-		width:580px;
-		margin: 0 30px;
+		width:550px;
+		margin: 0 25px;
 	}
 
 	section {
-		width:580px;
+		width:100%;
 	}
 
 	.main_img {
 		padding: 25px;
-		margin: 0 auto;
 	}
 
 	.main_img img {
-		width: 530px;
-		height: 400px;
+		width: 500px;
+		height: 350px;
+
+	}
+
+	.folio_img {
+		margin: 25px 25px 50px 25px ;
+	}
+
+	.folio_img img {
+		width: 500px;
+		margin: 0;
 	}
 
 	/*This class is a <div> container which has my bio in it . Includes <p> tags.*/
 
 	.content {
-		padding:0;
-		margin: 25px 25px 50px 25px;
+		padding:25px 25px 50px 25px;
+		margin: 0;
 	}
 
+	/*Stuff inside the <form> from above */
+
+	input {
+		width: 497px; 
+	}
+
+	/*Text area inside the <form> from above ,defines the Message area*/
+
+	textarea {
+		width: 497px;	
+	}
+
+
 	aside {
-		width: 580px;
+		
 		height: 200px;
 		padding: 0;
 		margin: 0 0 50px 0;
 	}	
 
 	h3 {
-		width: 550px;
+		width: 500px;
 		text-align: left;
 		padding:25px 0;
 		margin: 0 25px 0 25px;
