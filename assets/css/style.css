@@ -39,6 +39,8 @@ h1 {
 	float: left;
 }
 
+/*I've put here internal links*/
+
 nav {
 	height: 15px;
 	padding: 25px 0 25px 375px;
@@ -91,6 +93,8 @@ main {
 	overflow: hidden;
 }
 
+/*Section of with bio , folio , and contact containers*/
+
 section {
 	width: 650px;
 	background-color: #ffffff;
@@ -142,7 +146,7 @@ ul{
 	}
 }
 
-/*To arrange links horisontally*/
+/*To arrange links horisontally and make them applicable to animations */
 
 li {
 	display: inline-block;
@@ -152,7 +156,6 @@ li {
 li:hover {
 	animation-name: link_animation;
 	animation-duration: 0.3s;
-/*	-webkit-animation-timing-function: linear;*/
 	animation-iteration-count: infinite;
 
 }
@@ -200,17 +203,6 @@ h3 {
 	margin: 20px 70px 40px 70px;
 }
 
-/*Footer,footer,fooooooter,fooooter don't waste your time go down*/
-
-footer {
-	background-color:#666666;
-	color:#dddddd;
-	height: 60px;
-	border-top:5px solid #4aaaa5;
-	text-align: center;
-	line-height: 60px;
-	font-size: 12px;
-}
 
 /*Portfolio images I've made one class for them*/
 
@@ -241,6 +233,7 @@ a {
 
 form {
 	margin: 0 0 0 70px;
+
 }
 
 /*Stuff inside a <form> from above */
@@ -302,6 +295,18 @@ textarea:focus::-webkit-input-placeholder {
     color:white;
 }
 
+/*Footer,footer,fooooooter,fooooter don't waste your time go down*/
+
+footer {
+	background-color:#666666;
+	color:#dddddd;
+	height: 60px;
+	border-top:5px solid #4aaaa5;
+	text-align: center;
+	line-height: 60px;
+	font-size: 12px;
+}
+
 /*When I set the sticky footer up the body was pushing my text to the right to fix it I put this awesome solution here*/
 
 footer p{
@@ -320,7 +325,8 @@ footer , .push {
 /* ------------------------------------------------------------ Media queries ----------------------------------------------------------------------- */
 /*----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*Max screen width 980*/
+
+/*--------------------------------------------------------- Max screen width 980px ---------------------------------------------------------------------*/
 
 
 @media screen and (max-width: 980px) {
@@ -383,43 +389,29 @@ footer , .push {
 		margin: 0 25px 50px 25px;
 	}
 
-}
+	/*Form styling for contact.html*/
 
-/*Form styling for contact.html*/
-
-form {
-	margin: 0 0 0 25px;
-}
-
-/*Stuff inside the <form> from above */
-
-input {
-	width: 400px; 
-	padding: 10px 0;
-}
-
-/*Text area inside the <form> from above ,defines the Message area*/
-
-textarea {
-	width: 400px;	
-}
-
-/*Submit button from contact.html*/
-
-.submit {
-	width: 150px;
-	padding: 10px 0;
-	margin-bottom: 20px;
-}
-
-aside {
-	width: 270px;
-	height: 200px;
-	padding: 0;
-	margin: 30px 0 30px 30px;
+	form {
+		margin: 0 0 0 25px;
 	}
 
-/*---------------------------------------------------------------------Max screen width 768--------------------------------------------------------------------*/
+	/*Stuff inside the <form> from above */
+
+	input {
+		width: 400px; 
+		padding: 10px 0;
+	}
+
+	/*Text area inside the <form> from above ,defines the Message area*/
+
+	textarea {
+		width: 400px;	
+	}
+
+}
+
+/*------------------------------------------------------------------ Max screen width 768px -------------------------------------------------------------------*/
+
 
 @media screen and (max-width: 768px) {
 
@@ -465,6 +457,8 @@ aside {
 		margin: 25px 25px 50px 25px;
 	}
 
+	/*main image from the "Above" page here*/
+
 	.folio_img {
 		margin: 25px 25px 50px 25px ;
 	}
@@ -475,7 +469,7 @@ aside {
 
 	}
 
-	/*Stuff inside the <form> from above */
+	/*Input inside the <form> on the contact page*/
 
 	input {
 		width: 647px; 
@@ -518,7 +512,7 @@ aside {
 
 }
 
-/*----------------------------------------------------------------- Max screen width 640 --------------------------------------------------------------*/
+/*----------------------------------------------------------------- Max screen width 640px --------------------------------------------------------------*/
 
 @media screen and (max-width: 640px) {
 	
@@ -599,7 +593,7 @@ aside {
 		margin: 0;
 	}
 
-	/*Stuff inside the <form> from above */
+	/*Input inside the <form> on the contact page*/
 
 	input {
 		width: 497px; 
